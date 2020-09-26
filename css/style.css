@@ -1,11 +1,13 @@
 body {
   margin: 0px;
+  background-image: url(../img/back.png);
+  background-repeat: repeat;
 }
 
 ul {
-  padding:0;
-  margin:0;
-  list-style:none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 img {
@@ -13,17 +15,63 @@ img {
   max-width: 100%;
 }
 
+.header-logo {
+  width: 100%;
+  padding: 40px 0 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .slide-wrapper {
   overflow: hidden;
+  padding: 80px 0 0 0;
 }
 
 .slide {
   display: flex;
 }
 
+.slide:hover {
+  will-change: transform;
+}
+
 .slide li {
   flex-shrink: 0;
-  width: 80vw;
-  max-width: 800px;
+  width: 70vw;
+  max-width: 700px;
   margin: 0 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  opacity: 0.7;
+  transform: scale(0.8);
+  transition: 0.4s;
+}
+
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-controle="slide"] {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+[data-controle="slide"] li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 0.2px solid #ffffff;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 5px;
+}
+
+[data-controle="slide"] li.active a,
+[data-controle="slide"] li a:hover {
+  background: #ffffff;
 }
