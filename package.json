@@ -1,0 +1,25 @@
+{
+  "name": "premioubc2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack --mode production js/script.js --output ./main.js",
+    "dev": "webpack --mode development --watch js/script.js --output ./main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pvalcamartins/gallery.git"
+  },
+  "author": "PV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pvalcamartins/gallery/issues"
+  },
+  "homepage": "https://github.com/pvalcamartins/gallery#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

@@ -147,7 +147,7 @@ export class Slide {
   }
 }
 
-export class SlideNav extends Slide {
+export default class SlideNav extends Slide {
   constructor(slide, wrapper) {
     super(slide, wrapper);
     this.bindControlEvents();
@@ -166,11 +166,12 @@ export class SlideNav extends Slide {
 
   createControl() {
     const controle = document.createElement("ul");
+    const boxPag = document.querySelector(".pag");
     controle.dataset.controle = "slide";
     this.slideArray.forEach((item, index) => {
       controle.innerHTML += `<li><a href="#slide${index + 1}">${index + 1}</a></li>`;
     });
-    this.wrapper.appendChild(controle);
+    boxPag.appendChild(controle);
     return controle;
   }
 
