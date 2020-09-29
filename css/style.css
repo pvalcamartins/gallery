@@ -10,11 +10,16 @@
     url(../font/sanuk-bolditalic-webfont.woff2) format("woff2");
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0px;
   background-image: url(../img/back2.jpg);
   background-repeat: repeat;
   overflow: hidden;
+  height: 100%;
 }
 
 ul {
@@ -96,14 +101,21 @@ img {
 .slide-wrapper {
   position: relative;
   overflow: hidden;
-  padding: 70px 0 0 0;
+  padding: 70px 0 70px 0;
   z-index: 20;
 }
 
 .aarte {
-  margin: -100px auto 0 auto;
   z-index: 520;
-  position: relative;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+}
+
+.aarte div {
   width: 85vw;
   max-width: 850px;
 }
@@ -146,8 +158,8 @@ img {
   z-index: 500;
 }
 
-.pag {
-}
+/* .pag {
+} */
 
 .arrow-nav {
   position: absolute;
@@ -264,5 +276,32 @@ img {
   .slide li {
     width: 90vw;
     max-width: 900px;
+  }
+  .aarte,
+  .box-pag,
+  .arrow-nav {
+    display: none;
+  }
+  .abertura .ubc {
+    width: 125vw;
+  }
+  .abertura .caleidos {
+    left: -186px;
+    top: -220px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .aarte {
+    top: 0px;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .slide-wrapper {
+    padding: 140px 0 0 0;
+  }
+  .aarte {
+    padding: 70px 0 0 0;
   }
 }
