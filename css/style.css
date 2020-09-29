@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  background-image: url(../img/back.png);
+  background-image: url(../img/back2.jpg);
   background-repeat: repeat;
 }
 
@@ -15,6 +15,20 @@ img {
   max-width: 100%;
 }
 
+.abertura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.abertura .ubc {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 65vw;
+  mix-blend-mode: multiply;
+}
+
 .header-logo {
   width: 100%;
   padding: 40px 0 0 0;
@@ -22,11 +36,14 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 10;
 }
 
 .slide-wrapper {
+  position: relative;
   overflow: hidden;
   padding: 80px 0 0 0;
+  z-index: 20;
 }
 
 .slide {
@@ -74,26 +91,47 @@ img {
   max-width: 700px;
 }
 
+.arrow-nav {
+  position: relative;
+  z-index: 800;
+}
+
 [data-controle="slide"] {
   display: flex;
   justify-content: center;
   width: 135px;
   flex-wrap: wrap;
   z-index: 999;
-  margin: 0 -67px 0 0;
+  margin: 65px -67px 0 0;
 }
 [data-controle="slide"] li a {
   display: block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 0.2px solid #ffffff;
+  border: 1px solid #ffffff;
   overflow: hidden;
   text-indent: -999px;
   margin: 3px;
+  opacity: 0.6;
 }
 
 [data-controle="slide"] li.active a,
 [data-controle="slide"] li a:hover {
   background: #ffffff;
+  opacity: 1;
+}
+
+/* .frases {
+  position: absolute;
+  top: 0;
+} */
+.frases ul li {
+  display: none;
+  font-size: 80px;
+  color: #ffffff;
+}
+
+.frases ul li.active {
+  display: block;
 }

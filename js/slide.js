@@ -99,6 +99,7 @@ export class Slide {
     this.dist.finalPosition = activeSlide.position;
     this.changeActiveClass();
     this.wrapper.dispatchEvent(this.changeEvent);
+    this.showFrase();
   }
 
   changeActiveClass() {
@@ -193,6 +194,13 @@ export default class SlideNav extends Slide {
     this.controleArray = [...this.controle.children];
     this.activeControlItem();
     this.controleArray.forEach(this.eventControl);
+  }
+
+  showFrase() {
+    const frases = document.querySelector(".frases ul");
+    const frasesArray = [...frases.children];
+    frasesArray.forEach((item) => item.classList.remove(this.activeClass));
+    frasesArray[this.index.active].classList.add(this.activeClass);
   }
 
   bindControlEvents() {
