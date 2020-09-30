@@ -76,6 +76,29 @@ img {
   left: 110px;
 }
 
+.abertura .credito {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  bottom: 15px;
+}
+
+.abertura .credito smal {
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.8;
+  font-family: sanukRegular;
+}
+
+.abertura .credito img {
+  opacity: 0.8;
+  transform: scale(0.85);
+  margin: 0 10px 0 0;
+}
+
 /* .abertura .alagados img {
   width: 100%;
 } */
@@ -278,9 +301,14 @@ img {
     max-width: 900px;
   }
   .aarte,
-  .box-pag,
-  .arrow-nav {
+  .box-pag {
     display: none;
+  }
+  .arrow-nav {
+    top: unset;
+    bottom: 185px !important;
+    right: 0;
+    z-index: 999;
   }
   .abertura .ubc {
     width: 125vw;
@@ -289,11 +317,19 @@ img {
     left: -186px;
     top: -220px;
   }
+  .abertura .credito {
+    top: 127px;
+    bottom: unset;
+  }
 }
 
 @media screen and (max-height: 700px) {
   .aarte {
     top: 0px;
+  }
+  .abertura .credito {
+    top: 127px;
+    bottom: unset;
   }
 }
 
